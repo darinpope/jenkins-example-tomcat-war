@@ -45,7 +45,7 @@ pipeline {
     }  
     stage('copy the war file to the Tomcat server') {
       steps {
-        sh 'scp -i $TOMCAT_CREDS_PSW $LOCAL_WAR_FILE $TOMCAT_CREDS_USR@$TOMCAT_SERVER:$ROOT_WAR_LOCATION'
+        sh 'scp -i $TOMCAT_CREDS $LOCAL_WAR_FILE $TOMCAT_CREDS_USR@$TOMCAT_SERVER:$ROOT_WAR_LOCATION'
       }
     }
   }
